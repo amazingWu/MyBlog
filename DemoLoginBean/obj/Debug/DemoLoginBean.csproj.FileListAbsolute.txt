@@ -1,0 +1,5 @@
+F:\ceshi\DemoLogin\DemoLoginBean\obj\Debug\DemoLoginBean.csprojResolveAssemblyReference.cache
+F:\ceshi\DemoLogin\DemoLoginBean\bin\Debug\DemoLoginBean.dll
+F:\ceshi\DemoLogin\DemoLoginBean\bin\Debug\DemoLoginBean.pdb
+F:\ceshi\DemoLogin\DemoLoginBean\obj\Debug\DemoLoginBean.dll
+F:\ceshi\DemoLogin\DemoLoginBean\obj\Debug\DemoLoginBean.pdb

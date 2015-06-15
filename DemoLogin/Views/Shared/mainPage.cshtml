@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>吴琪的个人博客</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/UserCenterCss")
+</head>
+<body>
+    <header>
+    </header>
+    <div class="mainContent">
+        <h1 class="t_nav"><span>时代总是在不断的变迁，永远不能停歇停歇前进的脚步。 </span><a href="/Title/Index" class="n1">网站首页</a><a href="#" class="n2">关于我</a></h1>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="footavatar">
+            <img src="~/Images/head.jpg" class="footphoto" />
+            <ul class="footinfo">
+                <p class="fname"><a href="/dancesmile">死霸装加上</a>  </p>
+                <p class="finfo">性别：男 年龄：22岁</p>
+                <p>现居：江苏镇江</p>
+            </ul>
+        </div>
+        <div class="Copyright">
+            <ul>
+                <a href="/">联系我</a>
+                <a href="/">帮助</a>
+                <a href="/">空间协议</a>
+            </ul>
+            <p>Design by WuQi</p>
+        </div>
+    </footer>
+</body>
+</html>

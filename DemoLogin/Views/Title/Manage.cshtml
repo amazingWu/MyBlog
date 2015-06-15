@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.title = "文章管理";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+<script language="JavaScript">
+    //得到删除的条目
+    function dele(){
+        var getCK = document.getElementsByTagName('input');
+        var titlelist = "";
+        for (var i = 0; i < getCK.length; i++) {
+            whichObj = getCK[i];
+            if (whichObj.type == "checkbox") {
+                if (whichObj.checked == true && whichObj.value != "")
+                {
+                    if (titlelist != "") {
+                        titlelist = titlelist + "," + whichObj.value;
+                    } else {
+                        titlelist = titlelist + whichObj.value;
+                    }
+                }
+             }
+         }
+        if (titlelist != "") {
+            if (confirm("是否删除以下文章?" + titlelist)) {
+                var uri="/Title/Delete?titlelist="+titlelist;
+                location.href = uri;
+            }
+        } else {
+            alert("请选中要删除的条目！");
+        }
+    }
+    function dele_single(id) {
+        if (confirm("是否要删除该文章？"+id)) {
+            location.href="/Title/DeleteSingle?id="+id;
+        } else {
+
+        }
+    }
+</script>
+<div class="result-wrap">
+    <form name="myform" id="myform" method="post">
+        <div class="result-title">
+            <div class="result-list">
+                <a href="/Title/Create"><i class="icon-font"></i>新增作品</a>
+                <a id="batchDel" href="javascript:dele(0)"><i class="icon-font"></i>批量删除</a>
+                <!--<a id="updateOrd" onclick=""><i class="icon-font"></i>更新排序</a>-->>
+            </div>
+        </div>
+        <div class="result-content">
+            <table class="result-tab" width="100%">
+                <tbody>
+                    <tr>
+                        <th class="tc" width="5%"><input class="allChoose" value="" type="checkbox"></th>
+                        <th>ID</th>
+                        <th>标题</th>
+                        <th>发布人</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    @foreach (var t in (List<DemoLoginBean.Models.Title>)ViewBag.list)
+                    {
+                        <tr>
+                        <td class="tc"><input name="id[]" value=@t.ID type="checkbox"></td>
+                        <td>@t.ID</td>
+                        <td>
+                            <a target="_blank" href="/Title/Details/@t.ID">@t.tName</a> …
+                        </td>
+                        <td>@t.uName</td>
+                        <td>@t.tTime</td>
+                        <td>
+                            <a class="link-update" href="/Title/Edit/@t.ID">修改</a>
+                            <a class="link-del" href="javascript:dele_single(@t.ID)">删除</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="action-div">
+                @if ((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum > 1)
+                {
+                    @Html.ActionLink("上一页", "Manage", new { index = (ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum - 1 }, new { @class = "actionLink" })
+                }
+                @((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum)/@((ViewData["nowpage"] as DemoLogin.Models.NowPage).MaxNum)
+                @if ((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum < (ViewData["nowpage"] as DemoLogin.Models.NowPage).MaxNum)
+                {
+                    @Html.ActionLink("下一页", "Manage", new { index = (ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum + 1 }, new { @class = "actionLink" })
+                }
+            </div>
+        </div>
+    </form>
+</div>

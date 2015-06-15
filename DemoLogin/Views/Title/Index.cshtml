@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.title = "文章列表";
+    Layout = "~/Views/Shared/UserCenter.cshtml";
+}
+
+    @Styles.Render("~/TitleListCss")
+
+<div class="content-wrapper__inner">
+    <ol class="post-list">
+        @foreach (var t in (List<DemoLoginBean.Models.Title>)ViewBag.list)
+        {
+
+            <li>
+                <h2 class="post-list__post-title post-title"><a href="/Title/Details/@t.ID" title=@t.tName>@t.tName</a></h2>
+                <p class="excerpt">@Html.Raw(t.tContent)</p>
+
+                <div class="post-list__meta"><time datetime=@t.tTime class="post-list__meta--date date">@t.tTime</time> • <span class="post-list__meta--tags tags">于 <a href="/tag/iosdian-di/">@t.uName</a></span><a class="btn-border-small" href="/Title/Details/@t.ID">继续阅读</a></div>
+                <hr class="post-list__divider">
+            </li>
+            
+        }
+    </ol>
+        <div class="action-div">
+            @if ((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum > 1)
+            {
+                @Html.ActionLink("上一页", "Index", new { index = (ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum - 1 }, new { @class = "actionLink" })
+            }
+            @((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum)/@((ViewData["nowpage"] as DemoLogin.Models.NowPage).MaxNum)
+            @if ((ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum < (ViewData["nowpage"] as DemoLogin.Models.NowPage).MaxNum)
+            {
+                @Html.ActionLink("下一页", "Index", new { index = (ViewData["nowpage"] as DemoLogin.Models.NowPage).NowNum + 1 }, new { @class="actionLink"})
+            }
+        </div>
+     
+   
+</div>

@@ -1,0 +1,220 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* HTML5 display-role reset for older browsers */
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+
+html, body {
+  height: 100%; }
+
+html {
+  height: 100%;
+  max-height: 100%; }
+
+body {
+  
+  -webkit-font-smoothing: antialiased; }
+
+::selection {
+  background: #f39ca4; }
+
+a {
+  text-decoration: none;
+  color: #bf1827; }
+  a:hover {
+    color: #7b0f19;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s; }
+
+h2 {
+  font-size: 2.0em; }
+
+h3 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.2em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 1em; }
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em; }
+
+
+em {
+  font-style: italic; }
+
+
+.date,
+.time,
+.author,
+.tags {
+  font-size: .8em;
+  color: #c7c7c7; }
+  .date a,
+  .time a,
+  .author a,
+  .tags a {
+    color: #666666; }
+    .date a:hover,
+    .time a:hover,
+    .author a:hover,
+    .tags a:hover {
+      color: #7b0f19; }
+
+.excerpt {
+  margin: 0;
+  font-size: 0.9em;
+  color: #999999; }
+
+.intro {
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999999; }
+
+.block-heading {
+  display: inline;
+  float: left;
+  width: 940px;
+  margin: 0 10px;
+  position: relative;
+  bottom: -15px;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+
+
+.footer {
+  display: block;
+  padding: 2em 0 0 0;
+  border-top: 2px solid #dddddd;
+  font-size: .7em;
+  color: #b3b3b3; }
+
+.footer__copyright {
+  display: block;
+  margin-bottom: .7em; }
+  .footer__copyright a {
+    color: #a6a6a6;
+    text-decoration: underline; }
+    .footer__copyright a:hover {
+      color: #7b0f19; }
+
+
+hr {
+  border: none; }
+
+
+.hidden {
+  display: none !important; }
+
+.post-comments {
+  border-top: 1px solid #dddddd;
+  padding: 60px 0; }
+
+.post-meta {
+  margin: 0 0 .4em 0;
+  color: #c7c7c7; }
+
+.post-meta__date {
+  margin-right: .5em; }
+
+.post-meta__tags {
+  margin-left: .4em; }
+
+.post-meta__author {
+  margin-left: 1.5em; }
+.btn-border-small {
+  border: 1px solid #bf1827;
+  border-radius: 20px;
+  padding: 6px 8px;
+  font-size: .8em;
+  margin-left: 10px; }
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left; }
+    .post-list li:last-child hr {
+      display: none; }
+
+.post-list__post-title {
+    margin-top: 1.0em;
+    margin-bottom: .5em;
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: lighter;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    vertical-align: baseline;
+  margin-top: 0;
+  margin-bottom: .2em;
+  font-size: 1.8em;
+  line-height: 1.3em; }
+  .post-list__post-title a {
+
+    color:#454545;
+    font-size:75%;
+  }
+    .post-list__post-title a:hover {
+      color: #7b0f19; }
+
+.post-list__meta {
+  display: block;
+  margin: .7em 0 0 0;
+  font-size: .9em;
+  color: #c7c7c7; }
+
+.post-list__meta--date {
+  margin-right: .5em;
+  color: #c7c7c7; }
+
+.post-list__meta--tags {
+  margin-left: .5em; }
+
+.post-list__divider {
+  width: 30%;
+  margin: 1.2em 0 1.1em 0;
+  border-top: 1px solid #dddddd; }
+.content-wrapper__inner {
+margin: 0 10%;
+padding: 50px 0;
+min-height:1000px;
+}
+
+.action-div{
+    margin-top:40px;
+    margin-left:40px;
+}
+.actionLink{
+    font:bold;
+    font-size:1.2em;
+    font-family:'Microsoft YaHei UI';
+    padding:10px;
+}

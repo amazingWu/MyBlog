@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/LoginCss")
+    @Styles.Render("~/UserCenterCss")
+    <title>登录</title>
+</head>
+<body>
+    <div class="mainContent">
+        <h1 class="t_nav"><span>时代总是在不断的变迁，永远不能停歇停歇前进的脚步。 </span><a href="/" class="n1">网站首页</a><a href="#" class="n2">关于我</a></h1>
+        <div class="login">
+            <div class="ad">
+                <ul id="kad">
+                    <li class="background">
+
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <div class="loginForm">
+                    <h2>欢迎登录吴琪的个人博客</h2>
+                    <div class="loginPost">
+                        <form id="loginform" method="post">
+                            <label class="textBox nickname" style="margin:0 0 27px;">
+                                <input tabindex="1" name="UserName" id="user" type="text" class="inp icon_right" placeholder="用户名">
+                                <span></span>
+                            </label>
+                            <label class="textBox password" style="margin:0 0 27px;">
+                                <input tabindex="2" name="PassWord" id="password" value="" type="password" class="pwd icon_wrong" onpause="false" ondragenter="return false" onkeydown="loginenter(event)" placeholder="密码">
+                                <span></span>
+                            </label>
+                            <div class="clear"></div>
+                            <input id="loginbut" type="submit" value="登录" tabindex="5" class="loginButton">
+                            <a href="/cmdn/bbs/newdev.reg.php?action=reg_user&amp;from=0&amp;address=">注册帐号</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/cmdn/supesite/newdev.userreg.php?operation=forgetpwd">忘记密码</a>
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

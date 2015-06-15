@@ -1,0 +1,27 @@
+﻿@model DemoLoginBean.Models.Title
+
+@{
+    ViewBag.Title = "文章内容";
+    Layout = "~/Views/Shared/UserCenter.cshtml";
+}
+@Styles.Render("~/TitleCreateCss")
+
+<div class="content-wrapper__inner">
+    <div class="post-header">
+        <div class="post-meta">
+            <time class="post-meta__date date">@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tTime)</time> • <span class="post-meta__tags tags">于 <a href="/tag/iosdian-di/">@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).uName)</a></span>
+            @if ((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag != null)
+            {
+                <p class="post-meta__tags tags"> 标签：　@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag.Tag1)　@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag.Tag2)　@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag.Tag3) 　@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag.Tag4)　@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tag.Tag5)</p>　
+            }
+        </div>
+        <h1 class="post-title">@((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tName)</h1>
+    </div>
+    <div class="post tag-iosdian-di">
+        @Html.Raw((ViewData["titleDetail"] as DemoLoginBean.Models.Title).tContent)
+    </div>
+    <p>
+        @Html.ActionLink("回到主页", "Index")
+    </p>
+
+</div>

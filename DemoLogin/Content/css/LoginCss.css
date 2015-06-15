@@ -1,0 +1,73 @@
+﻿* {margin:0; padding:0; *zoom:1; outline:none;}
+body {font-family:"Microsoft Yahei"; font-size:12px; width:1024px;margin:0 auto;}
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 44px;
+    color: #29323d;
+    font-weight: normal;
+}
+a {cursor:pointer; text-decoration:none; color:#009084;}
+a:hover {text-decoration:underline;}
+.wrapper {max-width:1170px; min-width:420px; margin:0 auto;}
+.textBox {
+    border: 1px #c0e8e5 solid;
+    display: block;
+    max-width: 378px;
+    height: 36px;
+    padding: 0 0 0 40px;
+}
+.login {position:relative;}
+.login .ad ul {height:460px; overflow:hidden;}
+.login .ad li {background-repeat:no-repeat; background-position:center center; height:467px; min-width:1170px; display:none;}
+.login .wrapper {top:0; position:absolute;right:0;top:70px}
+.login .ad{z-index:0;}
+.login .ad .background{display: block; background-image:url("/Images/girl.jpg");background-position-x:10px; background-color:white;}
+.loginForm {
+    position: absolute;
+    right: 20px;
+    border: 1px #9abbb9 solid;
+    box-shadow: 0px 0px 4px #b4dad7;
+    background: #fff;
+    width: 300px;
+    padding: 20px 40px 30px;
+}
+.loginForm h2 {color: #009084;margin: 0 0 10px;}
+.loginForm a {
+    font-size: 14px;
+    text-decoration: underline;
+}
+.loginForm .textBox input {width:230px;}
+
+.nickname {background-position: 0 -200px;}
+.password {background-position: 0 -100px;}
+
+.loginButton {
+    background-color:lightblue;
+    height: 56px;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.textBox input {
+    border: none;
+    height: 33px;
+    background: none;
+    line-height: 36px;
+    font-size: 16px;
+    color: #85c3be;
+    width: 235px;
+    float: left;
+}
+
+

@@ -1,0 +1,66 @@
+﻿
+textarea{
+    min-height:343px;
+    width:80%;
+}
+#tName{
+    min-width:80%;
+    height:40px;
+    font-size:20px;
+}
+.submit {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.submit:hover {
+	text-decoration: none;
+}
+.submit:active {
+	position: relative;
+	top: 1px;
+}
+
+/*详细界面*/
+.post-meta {
+margin: 0 0 .4em 0;
+color: #c7c7c7;
+width:auto;
+height:auto;
+background-color:white;
+}
+.date, .time, .author, .tags {
+font-size: 1.1em;
+color: #c7c7c7;
+}
+.tags a {
+color: #666666;
+}
+.post-meta__date {
+margin-right: .5em;
+}
+.content-wrapper__inner {
+margin: 0 5%;
+padding-left:0px;
+padding-top:30px;
+min-height:1000px;
+}
+.post-title{
+    text-align:center;
+    margin:0 auto;
+}
+.post tag-iosdian-di{
+    font-size:1px;
+}
+

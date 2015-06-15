@@ -1,0 +1,11 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        你好，@Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" })!
+       <li>@Html.ActionLink("注销", "OutLogin", "Login")</li>
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("登录", "Login", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
